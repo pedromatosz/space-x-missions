@@ -2,7 +2,7 @@ import { Home } from '../components/Home'
 import { GetStaticProps, NextPage } from 'next'
 import { client } from '../graphql/client'
 import { GET_MISSIONS_OVERVIEW } from '../graphql/queries/getMissionsOverview'
-import { HomePageProps } from './types'
+import { HomePageProps } from '../components/Home/types'
 
 const HomePage: NextPage<HomePageProps> = ({ missions }) => {
   return <Home missions={missions} />

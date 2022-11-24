@@ -10,7 +10,7 @@ export const MissionDetails: React.FC<MissionDetailsProps> = ({ mission }) => {
     <Box>
       <Card>
         <CardHeader>
-          <Heading size="md">{mission.name}</Heading>
+          <Heading size="md">{mission?.name}</Heading>
         </CardHeader>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
@@ -18,7 +18,7 @@ export const MissionDetails: React.FC<MissionDetailsProps> = ({ mission }) => {
               <Heading size="xs" textTransform="uppercase">
                 Manufacturers
               </Heading>
-              {mission.manufacturers?.map((manufacturer) => {
+              {mission?.manufacturers?.map((manufacturer) => {
                 return (
                   <Text key={`_${manufacturer}`} pt="2" fontSize="sm">
                     {manufacturer}
@@ -31,7 +31,7 @@ export const MissionDetails: React.FC<MissionDetailsProps> = ({ mission }) => {
                 Mission Description
               </Heading>
               <Text pt="2" fontSize="sm">
-                {mission.description}
+                {mission?.description}
               </Text>
             </Box>
             <Box>
@@ -39,17 +39,17 @@ export const MissionDetails: React.FC<MissionDetailsProps> = ({ mission }) => {
                 Social
               </Heading>
               <Stack direction={['column', 'column', 'column', 'row']} padding={4}>
-                <Link target="_blank" href={mission.wikipedia || '#'}>
+                <Link target="_blank" href={mission?.wikipedia || '#'}>
                   <Button colorScheme="gray" leftIcon={<FaWikipediaW />}>
                     Wikipedia
                   </Button>
                 </Link>
-                <Link target="_blank" href={mission.twitter || '#'}>
+                <Link target="_blank" href={mission?.twitter || '#'}>
                   <Button colorScheme="twitter" leftIcon={<FaTwitter />}>
                     Twitter
                   </Button>
                 </Link>
-                <Link target="_blank" href={mission.website || '#'}>
+                <Link target="_blank" href={mission?.website || '#'}>
                   <Button colorScheme="blue" leftIcon={<FaGlobe />}>
                     Website
                   </Button>

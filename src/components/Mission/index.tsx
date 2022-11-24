@@ -9,7 +9,7 @@ export const Mission: React.FC<MissionProps> = ({ mission }) => {
     <Box w="100%" p={[2, 2, 4, 8]}>
       <SimpleGrid columns={[1, 2]} spacing={4}>
         <MissionDetails mission={mission} />
-        <Payloads payloads={mission.payloads || []} />
+        <Payloads payloads={mission?.payloads || []} />
       </SimpleGrid>
     </Box>
   )

@@ -2,8 +2,8 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { GET_MISSIONS_IDS } from '../../graphql/queries/getMissionsIds'
 import { client } from '../../graphql/client'
 import { GET_MISSION_BY_ID } from '../../graphql/queries/getMissionsByid'
-import { MissionPageProps } from './types'
 import { Mission } from '../../components/Mission'
+import { MissionPageProps } from '../../components/Mission/types'
 
 const MissionPage: NextPage<MissionPageProps> = ({ mission }) => {
   return <Mission mission={mission} />
